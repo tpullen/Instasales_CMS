@@ -1,0 +1,131 @@
+/*
+Team Member:	Tom Rochard-Pullen
+*/
+
+// File Description: Defines the Styles for the Header
+
+
+
+// ==========================================================
+
+#top-bar {
+	min-height: 58px;
+	background: @header-background;
+
+	@media screen and @screen-md {
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1020;
+		position: fixed;
+	}
+
+}
+
+.header-block {
+	padding-bottom: 58px;
+}
+
+.account
+.favourites,
+.basket {
+	display: inline-block;
+}
+
+.logo {
+	width: 13%;
+	float: left;
+	line-height: 58px;
+
+	@media screen and @screen-md {
+		width: 122px;
+	}
+
+}
+
+#navbar {
+	border: none;
+	margin-top: 17px;
+
+	@media screen and @screen-md {
+		margin-top: 0;
+	}
+
+	.nav {
+
+		> li,
+		.open {		
+
+			@media screen and @screen-md {
+				padding-top: 4px;
+			}
+			
+			> a,
+			> a:focus {
+				padding: 0;
+				color: contrast(@header-background);
+				border: none;
+				background: none;
+				border-radius: 0;
+
+				&:before {
+					content: '[';
+					opacity: 0;
+					margin-right: 10px;
+					display: inline-block;
+					transform: translateX(10px);
+					transition: transform 0.3s, opacity 0.2s;
+				}
+
+				&:after {
+					content: ']';
+					opacity: 0;
+					margin-left: 10px;
+					display: inline-block;
+					transform: translateX(-10px);
+					transition: transform 0.3s, opacity 0.2s;
+				}
+
+				&:hover {
+					background: none !important;
+
+					&:before,
+					&:after {
+						opacity: 1;
+						transform: translateX(0px);
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	.dropdown-menu {
+		background: @header-background;
+
+		> li > a,
+		> li > a:hover {
+			background: none!important;
+			color: contrast(@header-background);
+		}
+
+	}
+
+}
+
+.nav-tabs>li {
+	float: none;
+	text-align: center;
+}
+
+.navbar-nav {
+
+	@media screen and @screen-md {
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+
+}

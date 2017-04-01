@@ -1,0 +1,70 @@
+/*
+Team Member:	Tom Rochard-Pullen
+*/
+
+// File Description: Defines the Styles for the Order Confirmation page
+
+
+
+// ==========================================================
+
+#order {
+
+	table {
+
+		&.half {
+			margin-bottom: 15px;
+
+			tr {
+				margin-bottom: 0;
+				border-bottom: 1px solid #eff2f7;
+			}
+
+			td {
+				text-align: right;
+
+				b {
+					float: left;
+				}
+
+			}
+
+		}
+
+		@media screen and @screen-xs {
+
+			thead {
+	            display: none;
+	        }
+
+			tr {
+				display: block;
+				background: none;
+				margin-bottom: 10px;
+				border-bottom: 1px solid @brand-color;
+			}
+
+			td {
+				display: block;
+				font-size: 13px;
+				text-align: right;
+				background: #f7f7f7;
+				border: 1px solid #eff2f7;
+				border-bottom: none;
+			}
+
+			td:last-child {
+				border-bottom: none;
+			}
+
+			td:before {
+				content: attr(data-label);
+				float: left;
+				font-weight: bold;
+			}
+
+		}
+
+	}
+
+}

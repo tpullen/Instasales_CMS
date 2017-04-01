@@ -1,0 +1,47 @@
+/*
+Team Member:  Dan Lawford
+*/
+
+// File Description: Defines the Styles for the Header
+
+// ==========================================================
+
+.customers_panel{
+    @media screen and @screen-sm {
+      
+      background-color:transparent; 
+     
+      .customers_tbl{
+          border: 0;
+
+              thead {
+                display: none;
+              }
+
+              tr {
+                margin-bottom: 10px;
+                display: block;
+                border-bottom: 2px solid #ddd;
+                background:white;
+              }
+
+              td {
+                display: block;
+                text-align: right;
+                font-size: 13px;
+                border-bottom: 1px dotted #ccc;
+              }
+
+              td:last-child {
+                border-bottom: 0;
+              }
+
+              td:before {
+                content: attr(data-label);
+                float: left;
+                font-weight: bold;
+              }
+            }
+            
+      }
+}

@@ -1,0 +1,89 @@
+/*
+Team Member:	Tom Rochard-Pullen
+*/
+
+// File Description: Defines the Styles for the product listing
+
+
+
+// ==========================================================
+
+#listing {
+
+	#listing-layout {
+
+		.listing-header {
+			text-align: center;
+
+			.category-filter {
+				display: inline-block;
+
+				a {
+					padding: 0 5px;
+					line-height: 28px;
+
+					&:hover {
+						color: lighten(@text-color, 20%);
+					}
+
+				}
+
+			}
+
+		}
+
+		.listing-item {
+			margin-bottom: 30px;
+
+			.thumb {
+				width: 100%;
+				border-radius: 3px;
+				min-height: @listing-height;
+				max-height: @listing-height;
+
+				@media screen and @screen-md {
+					min-height: @listing-height-tablet;
+					max-height: @listing-height-tablet;
+				}
+
+			}
+
+			.item-name {
+			    width: 75%;
+			    overflow: hidden;
+			    white-space: nowrap;
+			    display: inline-block;
+			    text-overflow: ellipsis;
+			}
+
+			.item-name,
+			.item-price {
+				line-height: 30px;
+				font-size: 13px;
+			}
+
+			.item-price {
+				float: right;
+				color: #a60000;
+			}
+
+			a {
+				color: @text-color;
+				text-decoration: none;
+
+				&.active {
+					background: @header-background;
+					color: contrast(@header-background);
+				}
+
+			}
+
+		}
+
+	}
+
+	.filtering{
+		margin:20px auto; 
+	}
+
+}

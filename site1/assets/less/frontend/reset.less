@@ -1,0 +1,157 @@
+/*
+Team Member:	Tom Rochard-Pullen
+*/
+
+// File Description: Defines the defualt styles on elements
+
+
+
+// ==========================================================
+
+/*
+	---------------------------------------------
+	Srceen width variables for media queries
+	---------------------------------------------
+*/
+
+@screen-xl                       : ~"(min-width: 1200px)"; // Extra Large Desktop
+@screen-lg                       : ~"(max-width: 1199px)"; // Large Desktop
+@screen-md                       : ~"(max-width: 979px)"; // Small/Normal Desktop
+@screen-sm                       : ~"(max-width: 767px)"; // Tablet
+@screen-xs                       : ~"(max-width: 568px)"; // Mobile
+@screen-height-sm                : ~"(max-height: 800px) and (min-width: 979px)"; // Laptops (Smaller height)
+
+/*	END	*/
+
+html,
+body {
+	margin: 0;
+	position: relative;
+	font-family: arial;
+	height: 100%;
+	color: @text-color;
+}
+
+#wrap {
+	min-height: 100%;
+	position: relative;
+}
+
+.container-wrap:not(#top-bar) {
+
+	.container {
+
+		@media screen and @screen-xs {
+			padding-left: 0;
+			padding-right: 15px;
+		}
+
+	}
+
+}
+
+img {
+	max-width: 100%;
+}
+
+.clear {
+	clear: both;
+}
+
+.hr {
+	margin-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid @brand-color;
+}
+
+.button {
+
+	.btn {
+		color: @text-color;
+		padding: 0 15px;
+		font-size: 15px;
+		transition: 0.2s;
+		background: none;
+		line-height: 30px;
+		font-family: arial;
+		display: inline-block;
+		text-decoration: none;
+		border: 3px solid @brand-color
+	}
+
+	&:hover .btn {
+		tranistion: 0.2s;
+		background: @brand-color;
+		color: contrast(@brand-color);
+	}
+
+}
+
+/* PAGINATION
+---------------------------------- */
+div.pagination {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	text-align: center;
+}
+
+div.pagination a {
+	cursor: pointer;
+	margin-right: 5px;
+	padding: 4px 10px;
+	display: inline-block;
+	text-decoration: none;
+	color: @text-color;
+	border: 1px solid @brand-color;
+}
+
+div.pagination a.jp-current {
+	background: @brand-color;
+	color: contrast(@brand-color);
+}
+
+/* Custom Classes */
+// -----------------
+
+// Stack items to the left with 5px padding inbetween them
+.stack-left {
+	padding-left: 5px;
+	display: inline-block;
+}
+
+&:first-child.stack-left {
+	padding-left: 0;
+}
+
+// Align Center
+.align-center {
+	text-align: center;
+}
+
+// Remove margin
+.no-margin {
+	margin: 0 !important;
+}
+
+// Remove border
+.no-border {
+	border: none !important;
+}
+
+// Remove padding
+.no-padding {
+	padding: 0 !important;
+}
+
+// Remove bullets on a UL
+.no-bullets {
+	padding-left: 0;
+	list-style: none;
+}
+
+// Create White version of font awesome icons
+.fa-white {
+	color: #fff;
+}
+

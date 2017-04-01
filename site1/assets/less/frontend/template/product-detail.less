@@ -1,0 +1,213 @@
+/*
+Team Member:	Tom Rochard-Pullen
+*/
+
+// File Description: Defines the Styles for the product detail
+
+
+
+// ==========================================================
+
+.popup-box {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    width: 100%;
+
+    p {
+		font-weight: bold;
+		color: @text-color;
+	}
+
+}
+
+.show {
+	display:block;
+}
+
+
+#detail {
+
+	#product {
+		margin-top: 50px;
+
+		@media screen and @screen-xs {
+			margin-top: 25px;
+
+			.col-sm-7 {
+				padding: 0;
+
+
+			}
+
+		}
+
+		.main-image {
+
+			@media screen and @screen-xs {
+				padding: 0;
+			}
+
+			.carousel-control.right,
+			.carousel-control.left {
+				background: none;
+				top: 50%;
+				bottom: auto;
+				margin-top: -10px;
+
+				&:hover {
+					background: none;
+				}				
+			}
+		}
+
+		.product-info {
+			text-align: center;
+
+			/*@media screen and (max-width: 400px) {
+				width: 100%;
+			}*/
+
+			.inner {
+				padding: 25px 100px 0;
+
+				@media screen and @screen-md {
+					padding: 25px 0 0;
+				}
+			}
+
+			.item-name {
+				width: 100%;
+				font-size: 30px;
+				padding-bottom: 25px;
+
+				@media screen and @screen-md {
+					font-size: 25px;
+				}
+
+			}
+
+			.item-id {
+				display: none;
+			}
+
+			.item-price {
+				width: 100%;
+				padding-bottom: 25px;
+
+				div {
+					display: inline-block;
+				}
+
+				.price-was {
+					text-decoration: line-through;
+					padding: 0 20px 0 0;
+					color: #e3e3e3;
+				}
+
+			}
+
+			.item-strapline {
+				padding: 0 20px 30px;
+			}
+
+			select {
+				line-height: 35px;
+				width: 230px;
+				min-height: 35px;
+				margin-bottom: 20px;
+			}
+
+			.button .btn {
+				width: 200px;
+			}
+
+			.scroller {
+				border-top: 1px solid #e3e3e3;
+				border-bottom: 1px solid #e3e3e3;
+				padding: 25px 0;
+				margin-top: 47px;
+
+				@media screen and @screen-md {
+					display: none;
+				}
+
+			}
+
+			.thumbnail {
+				margin-bottom: 0;
+				border-radius: 0;
+
+				@media screen and @screen-xs {
+					margin: 5px 0;
+				}
+
+				&:hover {
+					border-color: #363A41;
+				}
+
+				img {
+					width: auto;
+					height: auto;
+				}
+			}
+		}
+	}
+
+	#extras {
+		text-align: center;
+		margin-bottom: 80px;
+
+		.container {
+			padding: 0;
+		}
+
+		.tabs {
+			text-align: center;
+			margin: 60px 0 30px;
+			padding-bottom: 20px;
+			border-bottom: 1px solid #e3e3e3;
+
+			@media screen and @screen-md {
+				margin-top: 40px;
+			}
+
+			.tab {
+				margin: 0 20px;
+
+				&.active {
+					border-bottom: 2px solid #000;
+					padding-bottom: 20px;
+				}
+
+			}
+
+		}
+
+		.item-main-desc {
+			margin-bottom: 30px;
+		}
+
+		.content {
+			display: block;
+			text-align: center;
+			padding-bottom: 20px;
+			line-height: 20px;
+			padding: 0 40px 20px;
+		}
+
+		.additional-items {
+			border-top: 1px solid #e3e3e3;
+		}
+
+		.additional-items > span {
+			display: block;
+			padding-top: 30px;
+			font-size: 20px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+	}
+
+} 

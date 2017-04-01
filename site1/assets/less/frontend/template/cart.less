@@ -1,0 +1,72 @@
+/*
+Team Member:	Tom Rochard-Pullen
+*/
+
+// File Description: Defines the Styles for the Cart
+
+
+
+// ==========================================================
+
+#cart {
+
+	.button.remove-item {
+
+		.btn {
+			padding: 0;
+			border: none;
+			line-height: normal;
+		}
+
+		&:hover .btn {
+			color: #cb2a2a;
+			background: none;
+		}
+
+	}
+
+	.cart-buttons {
+		margin: 40px 0 0;
+
+		.button {
+			margin: 0 5px;
+			display: inline-block;
+		}
+
+	}
+
+	@media screen and @screen-xs {
+
+		thead {
+            display: none;
+        }
+
+		tr {
+			display: block;
+			background: none;
+			margin-bottom: 10px;
+			border-bottom: 1px solid @brand-color;
+		}
+
+		td {
+			display: block;
+			font-size: 13px;
+			text-align: right;
+			background: #f7f7f7;
+			border: 1px solid #eff2f7;
+			border-bottom: none;
+		}
+
+		td:last-child {
+			border-bottom: none;
+		}
+
+		td:before {
+			content: attr(data-label);
+			float: left;
+			font-weight: bold;
+		}
+
+	}
+
+}

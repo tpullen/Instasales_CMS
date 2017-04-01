@@ -1,0 +1,119 @@
+/*
+Team Member:	Chris Wardle
+*/
+
+// File Description: Defines the Styles for the account dashboard
+
+
+
+// ==========================================================
+
+
+.orderDashboard{
+	margin-top: 50px;
+    width: 100%;
+    max-width: 980px;
+    min-height: 250px;
+	margin: 0 auto;
+    border: 1px solid #ddd;
+
+    @media screen and @screen-sm{
+		max-width: 100%;
+    	min-width: 100%;
+	}
+}
+
+.orderDashboard .main{
+	max-width: 100%;
+	position: relative;
+}
+
+.orderDashboard .sidepanel{
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	margin-top: 10px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #ddd;
+}
+
+
+.orderDashboard .sidepanel .btn{
+	margin-bottom: 10px;
+	width:  124px;
+}
+
+.orderDashboard .rightsection{
+	width: 100%;
+	display: inline-block;
+}
+
+.orderDashboard .main-title{
+	font-size: 28px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.orderDashboard table{
+	margin-top: 20px;
+}
+
+
+
+.orderDashboard .fa{
+	margin-left: 5px;
+}
+
+.orderDashboard.tag{
+	display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.orderDashboard .item-name{
+	display: block;
+    clear: right;
+}
+
+@media screen and @screen-sm {
+
+	.orderDashboard table{
+		background-color:transparent; 
+	}
+
+	.orderDashboard table thead{
+		display: none;
+	}
+
+	.orderDashboard table tr{
+		margin-bottom: 10px;
+        display: block;
+        border-bottom: 2px solid #ddd;
+        background:white;
+	}
+
+	.orderDashboard table td{
+		display: block;
+        text-align: right;
+        font-size: 13px;
+        border-bottom: 1px dotted #ccc;
+	}
+
+	.orderDashboard table .View:before{
+		display: none;
+	}
+
+	.orderDashboard table td:last-child {
+        border-bottom: 0;
+    }
+
+    .orderDashboard table td:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+    }
+
+
+}
